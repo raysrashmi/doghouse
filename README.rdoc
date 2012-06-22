@@ -1,0 +1,11 @@
+This application is fetching following of your twitter account and then you unfollow them
+after certain period of time can follow again
+
+#To setup
+
+you need to register on
+https://dev.twitter.com/
+Then put your credentials on provider.yml(this is the copy of provider.yml.example)
+
+Remember to set accesss to Read/Write
+

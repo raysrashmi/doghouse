@@ -1,0 +1,12 @@
+unfollow_friends_users GET    /users/unfollow_friends(.:format)  users#unfollow_friends
+                 users GET    /users(.:format)                   users#index
+                       POST   /users(.:format)                   users#create
+              new_user GET    /users/new(.:format)               users#new
+             edit_user GET    /users/:id/edit(.:format)          users#edit
+                  user GET    /users/:id(.:format)               users#show
+                       PUT    /users/:id(.:format)               users#update
+                       DELETE /users/:id(.:format)               users#destroy
+                  root        /                                  home#index
+                              /auth/:provider/callback(.:format) authentications#create
+                logout        /logout(.:format)                  authentications#destroy
+         resque_server        /resque                            Resque::Server

@@ -1,0 +1,22 @@
+<%= form_tag unfollow_friends_users_path,:method => :get ,:class => 'doghouse_form' do %>
+  <table>
+    <tbody>
+      <% friends.each do |a|%>
+        <tr>
+          <td><%= a.name%></td>
+          <td><%= a.screen_name%></td>
+          <td><%= check_box_tag 'followers[]', a.screen_name%></td>
+        </tr>
+      <%end%>
+    </tbody>
+  </table>
+
+  <%= submit_tag 'Unfollow',:class => 'unfollow'%>
+
+<%end%>
+
+<div class ='time_dialog'>
+    <%= text_field_tag 'follow_at','',:id => 'datepicker'  %>
+    <%= text_field_tag 'email'%>
+    <%=link_to 'Enter in Doghouse','#',:id => 'enter_in_doghouse' %>
+</div>

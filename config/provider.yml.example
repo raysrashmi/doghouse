@@ -1,0 +1,6 @@
+development:
+  twitter:
+    key: "consumer key"
+    secret: "consumer secret"
+    oauth_token: "Access token"
+    oauth_token_secret: "Access token secret"

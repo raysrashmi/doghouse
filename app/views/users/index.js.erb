@@ -1,0 +1,10 @@
+$('#followers').append('<%= j render(:partial => 'followers',:locals => {:followers => @followers}) %>');
+<% if @followers.next_page %>
+console.log('rays')
+$('.pagination').replaceWith('<%= j will_paginate(@followers) %>');
+<% else %>
+console.log('rays')
+$('.pagination').remove();
+<% end %>
+
+
